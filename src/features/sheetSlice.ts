@@ -1,17 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-type Square = {
-  id: number;
-  color: string;
-};
-
-const generateRandomColor = (): string => {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-};
-
-interface SheetState {
-  squares: Square[];
-}
+import { generateRandomColor } from "../utils/utils";
+import { SheetState, Square } from "./types";
 
 const initialState: SheetState = {
   squares: [],
